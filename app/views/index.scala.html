@@ -1,6 +1,6 @@
-@(message: String)
+@(message: String, env: Environment)
 
-@main("Welcome to Play") {
+@main("Welcome to Play", env) {
 
     @play20.welcome(message)
 
