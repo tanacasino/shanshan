@@ -7,10 +7,10 @@ object Home extends Controller {
   def index = Action { implicit request =>
     val userAgent = request.headers.get("User-Agent")
     val remoteAddr = request.remoteAddress
-    val env = Environment(userAgent.getOrElse("None"), remoteAddr)
+    val env = Environment(userAgent.getOrElse("None"), remoteAddr, request.headers.toString)
     Ok(views.html.home(env))
   }
 
 }
 
-case class Environment(userAgent: String, remoteAddr: String)
+case class Environment(userAgent: String, remoteAddr: String, headers: String)
