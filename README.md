@@ -1,5 +1,11 @@
 ShanShan (Look Up Your Environment)
-=====================================
+===================================
 
-Show your environment infomation (IPs, dns, os, browser, currenttime...)
+Show your environment infomations
+
+* IP Address
+* DNS
+* OS
+* Browser
+* CurrentTime
 
