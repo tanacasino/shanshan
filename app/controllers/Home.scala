@@ -3,6 +3,8 @@ package controllers
 import play.api.mvc._
 import play.api.Logger
 import is.tagomor.woothee.Classifier
+import org.joda.time.DateTime
+import org.joda.time.format.DateTimeFormat
 
 object Home extends Controller {
 
@@ -35,12 +37,14 @@ object Home extends Controller {
       case None => "unknown"
     }
 
+    val time = new DateTime toString(DateTimeFormat.longDateTime)
+
     val env = Environment(UserAgent(userAgent, browser, browserVersion, os, category),
-                          ipAddress, proto, request.headers.toString)
+                          ipAddress, proto, time, request.headers.toString)
     Ok(views.html.home(env))
   }
 
 }
 
-case class Environment(userAgent: UserAgent, ipAddress: String, proto: String, headers: String)
+case class Environment(userAgent: UserAgent, ipAddress: String, proto: String, time: String, headers: String)
 case class UserAgent(userAgent: String, browser: String, version: String, os: String, category: String)
