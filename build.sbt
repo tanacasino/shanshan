@@ -6,4 +6,6 @@ libraryDependencies ++= Seq(
   cache
 )
 
+unmanagedBase := baseDirectory.value / "lib"
+
 play.Project.playScalaSettings
