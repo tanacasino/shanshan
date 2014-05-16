@@ -4,7 +4,7 @@ ShanShan (Look Up Your Environment)
 Show your environment infomations
 
 * IP Address
-* DNS
+* Hostname
 * OS
 * Browser
 * CurrentTime
