@@ -1,142 +1,142 @@
 @(env: Environment)
 
 @main("ShanShan", env) {
-    <div class="container">
-        <div class="page-header" id="banner">
-            <div class="row">
-                <div class="col-lg-8">
-                    <h1>ShanShan</h1>
-                    <p class="lead">Look Up Your Environment</p>
-                </div>
-                <div class="col-lg-4">
-                    <div class="well well-sm">
-                        <ul>
-                            <li>Source Code : <a href="https://github.com" target="_blank">Github</a></li>
-                            <li>License : BSD License</li>
-                            <li>Author : <a href="https://github.com" target="_blank">Author</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+  <div class="container">
+    <div class="page-header" id="banner">
+      <div class="row">
+        <div class="col-lg-8">
+          <h1>ShanShan</h1>
+          <p class="lead">Look Up Your Environment</p>
         </div>
+        <div class="col-lg-4">
+          <div class="well well-sm">
+            <ul>
+              <li>Source Code : <a href="https://github.com" target="_blank">Github</a></li>
+              <li>License : BSD License</li>
+              <li>Author : <a href="https://github.com" target="_blank">Author</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">User Agent</h3>
+          </div>
+          <div class="panel-body">
+          @env.userAgent.userAgent
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">Datetime.now()</h3>
+          </div>
+          <div class="panel-body">
+          @env.time
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="container">
-
-        <div class="row">
-            <div class="col-lg-8">
-                <div class="panel panel-info">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">User Agent</h3>
-                    </div>
-                    <div class="panel-body">
-                    @env.userAgent.userAgent
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="panel panel-info">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Datetime.now()</h3>
-                    </div>
-                    <div class="panel-body">
-                        @env.time
-                    </div>
-                </div>
-            </div>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">OS</h3>
+          </div>
+          <div class="panel-body">
+          @env.userAgent.os
+          </div>
         </div>
-
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="panel panel-info">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">OS</h3>
-                    </div>
-                    <div class="panel-body">
-                        @env.userAgent.os
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="panel panel-info">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Web Browser</h3>
-                    </div>
-                    <div class="panel-body">
-                        @env.userAgent.browser
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="panel panel-info">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Category</h3>
-                    </div>
-                    <div class="panel-body">
-                        @env.userAgent.category
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">Web Browser</h3>
+          </div>
+          <div class="panel-body">
+          @env.userAgent.browser
+          </div>
         </div>
-
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="panel panel-info">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">IP Address</h3>
-                    </div>
-                    <div class="panel-body">
-                    @env.ipAddress
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4">
-                <div class="panel panel-info">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Hostname</h3>
-                    </div>
-                    <div class="panel-body">
-                        @env.hostname
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4">
-                <div class="panel panel-info">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Scheme</h3>
-                    </div>
-                    <div class="panel-body">
-                        @env.proto
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">Category</h3>
+          </div>
+          <div class="panel-body">
+          @env.userAgent.category
+          </div>
         </div>
-
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="panel panel-danger">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">JavaScript</h3>
-                    </div>
-                    <div class="panel-body">
-                        Disabled
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4">
-                <div class="panel panel-danger">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">WebSocket</h3>
-                    </div>
-                    <div class="panel-body">
-                        Unavailable
-                    </div>
-                </div>
-            </div>
-        </div>
-
+      </div>
     </div>
+
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">IP Address</h3>
+          </div>
+          <div class="panel-body">
+          @env.ipAddress
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">Hostname</h3>
+          </div>
+          <div class="panel-body">
+          @env.hostname
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">Scheme</h3>
+          </div>
+          <div class="panel-body">
+          @env.proto
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="panel panel-danger">
+          <div class="panel-heading">
+            <h3 class="panel-title">JavaScript</h3>
+          </div>
+          <div class="panel-body">
+            Disabled
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="panel panel-danger">
+          <div class="panel-heading">
+            <h3 class="panel-title">WebSocket</h3>
+          </div>
+          <div class="panel-body">
+            Unavailable
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
 }
