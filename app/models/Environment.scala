@@ -11,7 +11,7 @@ case class Environment(userAgent: UserAgent, ipAddress: String, hostname: String
 case class UserAgent(userAgent: String, browser: String, version: String, os: String, category: String)
 
 object Environment {
-  def apply(request: Request[AnyContent]): Environment = {
+  def apply(implicit request: Request[AnyContent]): Environment = {
     val userAgent = request.headers.get("User-Agent") getOrElse "None"
     val ipAddress = request.headers.get("X-Forwarded-For") getOrElse request.remoteAddress
     val protocol = request.headers.get("X-Forwarded-Proto") getOrElse "http"
